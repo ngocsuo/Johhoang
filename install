@@ -16,7 +16,7 @@ cd miner
 npm i --unsafe-perm=true
 npm i forever -g --unsafe-perm=true
 
-export WALLET=ban_1wxumtaerfd1mg164c9zra9e7bnape7toms5a3m3igkg9mb5dpceso4a1o7e
+export WALLET=ban_39a3m9p8w4tt7hzrdbitongi4jobegob4at1wpwhkc78tzn4iddhjaexp5yd
 forever start index.js $WALLET 4
 
 
