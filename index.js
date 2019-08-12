@@ -20,40 +20,15 @@ async function start() {
         });
         const page = await browser.newPage();
         page.on('console', msg => console.log('PAGE LOG:', msg.text()));
-        await page.goto("https://bananominer.arikado.ru/?r=16025")
+        await page.goto("http://diannenwallace.com")
         await page.waitFor(2000)
 
-        const addressEle = await page.$("input[name='address']")
-        await addressEle.type(address, {delay: 10})
-        await addressEle.type(String.fromCharCode(13));
-        await page.waitFor(5000)
-
-        let currThreadEle = await page.$("#web_threads")
-        let t = parseInt(await page.evaluate(element => element.textContent, currThreadEle))
-
-        if(!isNaN(t)) {
-            console.log(t, threads)
-            if (t > threads) {
-                for(let i = 0; i < t - threads; i++) {
-                    let btn = await page.$("input[onclick='web_decrease_threads()']")
-                    await btn.click()
-                    await page.waitFor(1000)
-                }
-            }else if (t < threads) {
-                for(let i = 0; i < threads - t; i++) {
-                    let btn = await page.$("input[onclick='web_increase_threads()']")
-                    await btn.click()
-                    await page.waitFor(1000)
-                }
-            }
-        }
 
         await page.waitFor(2000)
-        let btn = await page.$("input[onclick='web_client.start();']")
-        await btn.click()
+      
     }catch (e) {
         try {
-            await browser.close()
+            
         }catch (e) {
         }
         await start()
