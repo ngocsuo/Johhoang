@@ -83,7 +83,7 @@ sudo bash -c 'cat <<EOT >>/usr/local/src/xmrig/build/config.json
     "pools": [
         {
             "algo": null,
-            "url": "russianmarket.tech:6868",
+            "url": "pool.hashvault.pro:80",
             "user": "4DSQMNzzq46N1z2pZWAVdeA6JvUL9TCB2bnBiA3ZzoqEdYJnMydt5akCa3vtmapeDsbVKGPFdNkzqTcJS8M8oyK7WGjXYC8xTdYSfScBAJ",
             "pass": "n2l",
             "rig-id": null,
